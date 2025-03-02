@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".fragment.HomeFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -26,9 +27,9 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             app:iss_auto_cycle="true"
-            app:iss_delay="1000"
+            app:iss_delay="3000"
             app:iss_no_dots="true"
-            app:iss_period="1000"
+            app:iss_period="3000"
             app:iss_text_align="CENTER" />
 
     </androidx.cardview.widget.CardView>
@@ -39,24 +40,25 @@
         android:layout_height="0dp"
         android:layout_marginTop="16dp"
         android:layout_marginLeft="10dp"
+        tools:listitem="@layout/popular_item"
         android:layout_marginRight="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView20" />
+        app:layout_constraintTop_toBottomOf="@+id/viewMenu" />
 
     <TextView
         android:id="@+id/textView19"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="Popular"
+        android:text="@string/popular"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
     <TextView
-        android:id="@+id/textView20"
+        android:id="@+id/viewMenu"
         android:layout_width="80dp"
         android:layout_height="25dp"
         android:background="@drawable/tvshape"
@@ -64,8 +66,8 @@
         android:textColor="@color/green_light"
         android:gravity="center"
         android:elevation="5dp"
-        android:layout_marginRight="16dp"
-        android:text="View Menu"
+        android:layout_marginEnd="16dp"
+        android:text="@string/view_menu"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView" />
 

@@ -1,12 +1,9 @@
-package com.ducfore.foododering
+package com.ducfore.foododering.Activity
 
 import android.content.Intent
 import android.os.Bundle
-import android.renderscript.ScriptGroup.Binding
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.ducfore.foododering.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
@@ -18,11 +15,11 @@ class LoginActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(binding.root)
         binding.btnLogin.setOnClickListener {
-            val intent = Intent(this,SignActivity::class.java)
+            val intent = Intent(this, SignActivity::class.java)
             startActivity(intent)
         }
         binding.dontHaveAccount.setOnClickListener {
-            val intent = Intent(this,SignActivity::class.java)
+            val intent = Intent(this, SignActivity::class.java)
             startActivity(intent)
         }
     }

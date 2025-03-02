@@ -1,12 +1,11 @@
-package com.ducfore.foododering
+package com.ducfore.foododering.Activity
 
+//noinspection SuspiciousImport
 import android.R
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.ducfore.foododering.databinding.ActivityChooseLocationBinding
 
 class ChooseLocationActivity : AppCompatActivity() {

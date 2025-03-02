@@ -7,12 +7,11 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.denzcoskun.imageslider.constants.ScaleTypes
-import com.denzcoskun.imageslider.interfaces.ItemClickListener
 import com.denzcoskun.imageslider.models.SlideModel
 import com.ducfore.foododering.Adapter.PopularAdapter
+import com.ducfore.foododering.Activity.MenuBottomSheetFragment
 import com.ducfore.foododering.R
 import com.ducfore.foododering.databinding.FragmentHomeBinding
-import com.google.android.material.slider.Slider
 
 
 class HomeFragment : Fragment() {
@@ -29,6 +28,12 @@ class HomeFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentHomeBinding.inflate(inflater,container,false)
+        //Click View Menu -> MenuAdapter
+        binding.viewMenu.setOnClickListener {
+            val bottomSheetDialog = MenuBottomSheetFragment()
+            bottomSheetDialog.show(parentFragmentManager,"TestOnly")
+
+        }
         return binding.root
 
     }
@@ -49,7 +54,7 @@ class HomeFragment : Fragment() {
         val popularPrice = listOf("45000 VNĐ","50000 VNĐ","10000 VNĐ","5000VNĐ")
         val popularImageFood = listOf(R.drawable.menu1,R.drawable.menu2,R.drawable.menu3,R.drawable.menu1)
 
-        val adapter = PopularAdapter(popularPrice,popularImageFood,popularFoodName)
+        val adapter = PopularAdapter(popularPrice,popularImageFood,popularFoodName,requireContext())
         binding.popularRecycleView.layoutManager = LinearLayoutManager(requireContext())
         binding.popularRecycleView.adapter = adapter
     }

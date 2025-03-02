@@ -13,27 +13,36 @@
         android:theme="@style/Theme.FoodOdering"
         tools:targetApi="31">
         <activity
-            android:name=".ChooseLocationActivity"
-            android:exported="false" >
+            android:name=".Activity.DetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.PayOutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.MenuBottomSheetFragment"
+            android:exported="false"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".Activity.ChooseLocationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.SignActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.StartActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Splash_Screen"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.MainActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan">
 
-    </activity>
-        <activity
-            android:name=".SignActivity"
-            android:exported="false" />
-        <activity
-            android:name=".LoginActivity"
-            android:exported="false" />
-        <activity
-            android:name=".StartActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Splash_Screen"
-            android:exported="false">
-
-        </activity>
-        <activity
-            android:name=".MainActivity"
-            android:exported="true" >
+            <!-- An thanh cong cu fragment khi search> -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
